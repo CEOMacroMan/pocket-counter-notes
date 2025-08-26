@@ -8,7 +8,9 @@
   --color-focus-ring: #0066ee;
   --color-short-ring: #009e4f;
   --color-long-ring: #c53f3f;
+
   --color-ring-bg: #e0e0e0;
+
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -27,7 +29,9 @@
     --color-focus-ring: #4d90fe;
     --color-short-ring: #2ebf4f;
     --color-long-ring: #e04343;
+
     --color-ring-bg: #3a3a3a;
+
   }
 }
 
@@ -150,7 +154,9 @@ textarea {
 }
 
 .pomodoro .ring-bg {
+
   stroke: var(--color-ring-bg);
+
 }
 
 .pomodoro .ring-progress {
@@ -211,4 +217,16 @@ select {
 .help {
   width: min(90%, 400px);
   font-size: 0.875rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
