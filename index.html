@@ -19,6 +19,42 @@
         <label for="notes" class="notes-label">Notes</label>
         <textarea id="notes" rows="4" placeholder="Write your notes here..."></textarea>
       </section>
+      <section class="card pomodoro focus" id="pomodoro-card" aria-label="Pomodoro timer">
+        <h2>Pomodoro</h2>
+        <div class="timer" role="timer" aria-live="polite">
+          <svg viewBox="0 0 100 100" class="ring" aria-hidden="true">
+            <circle class="ring-bg" cx="50" cy="50" r="45"></circle>
+            <circle class="ring-progress" cx="50" cy="50" r="45"></circle>
+          </svg>
+          <div class="time" id="pomodoro-time">25:00</div>
+        </div>
+        <div class="modes" role="group" aria-label="Timer modes">
+          <button type="button" data-mode="focus" aria-pressed="true">Focus</button>
+          <button type="button" data-mode="short" aria-pressed="false">Short break</button>
+          <button type="button" data-mode="long" aria-pressed="false">Long break</button>
+        </div>
+        <div class="pomodoro-controls">
+          <button id="pomodoro-start" type="button">Start</button>
+          <button id="pomodoro-reset" type="button" disabled>Reset</button>
+          <label for="pomodoro-duration" class="sr-only">Duration</label>
+          <select id="pomodoro-duration">
+            <option value="1">1 min</option>
+            <option value="5">5 min</option>
+            <option value="10">10 min</option>
+            <option value="15">15 min</option>
+            <option value="20">20 min</option>
+            <option value="25" selected>25 min</option>
+            <option value="30">30 min</option>
+            <option value="45">45 min</option>
+            <option value="60">60 min</option>
+          </select>
+        </div>
+      </section>
+      <section class="help">
+        <h2>Help</h2>
+        <p><strong>Shortcuts:</strong> Space &ndash; start/pause, f &ndash; focus, b &ndash; short break, l &ndash; long break.</p>
+        <p>The timer stores its state using the system clock so it can keep running if you reload.</p>
+      </section>
     </main>
     <script src="app.js"></script>
   </body>
