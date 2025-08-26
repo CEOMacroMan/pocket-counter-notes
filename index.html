@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pocket Counter Notes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card">
+        <div class="counter" aria-live="polite">
+          <span id="value">0</span>
+        </div>
+        <div class="controls">
+          <button id="increment" type="button">+1</button>
+          <button id="decrement" type="button">&minus;1</button>
+          <button id="reset" type="button" disabled>Reset</button>
+        </div>
+        <label for="notes" class="notes-label">Notes</label>
+        <textarea id="notes" rows="4" placeholder="Write your notes here..."></textarea>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
